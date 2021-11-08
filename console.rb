@@ -2,7 +2,7 @@ require './person'
 require './student'
 require './teacher'
 
-person = Person.new(18)
+person = Person.new(18, 'Ebere', false)
 p person.can_use_services?
 
 student = Student.new(2, 'Rex')

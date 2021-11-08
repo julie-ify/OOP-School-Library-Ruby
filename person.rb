@@ -1,3 +1,5 @@
+# rubocop: disable Style/OptionalBooleanParameter
+
 class Person
   def initialize(age, name = 'Unknown', parent_permission = true)
     @id = Random.rand(1..1000)
@@ -24,3 +26,5 @@ class Person
     @age >= 18
   end
 end
+
+# rubocop: enable Style/OptionalBooleanParameter
