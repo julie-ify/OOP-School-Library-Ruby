@@ -43,4 +43,4 @@ class Person
 end
 
 person_1 = Person.new(18)
-p person_1.can_use_service?
+# p person_1.can_use_service?
