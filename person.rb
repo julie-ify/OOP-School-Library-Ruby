@@ -25,7 +25,7 @@ class Person
     @age = value
   end
 
-  def can_use_service?
+  def can_use_services?
     if is_of_age? || @parent_permission
       true
     else false
@@ -33,14 +33,11 @@ class Person
   end
 
   private
+
   def is_of_age?
     if @age >= 18
       true
     else false
     end
   end
-
 end
-
-person_1 = Person.new(18)
-# p person_1.can_use_service?

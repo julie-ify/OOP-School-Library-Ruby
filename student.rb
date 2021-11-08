@@ -2,7 +2,7 @@ require './person.rb'
 
 class Student < Person
   def initialize(classroom, name = "Unknown")
-    super(18, name)
+    super(20, name)
     @classroom = classroom
   end
 
@@ -11,6 +11,3 @@ class Student < Person
   end
 end
 
-student = Student.new(2, "Rex")
-p student
-p student.play_hooky
