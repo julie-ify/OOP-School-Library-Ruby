@@ -1,13 +1,13 @@
-require './person.rb'
-require './student.rb'
-require './teacher.rb'
+require './person'
+require './student'
+require './teacher'
 
-person_1 = Person.new(18)
-person_1.can_use_services?
+person = Person.new(18)
+p person.can_use_services?
 
-student = Student.new(2, "Rex")
-student.can_use_services?
-student.play_hooky
+student = Student.new(2, 'Rex')
+p student.can_use_services?
+p student.play_hooky
 
-teacher = Teacher.new("Math", "Muna")
-teacher.can_use_services?
+teacher = Teacher.new('Math', 'Muna')
+p teacher.can_use_services?
