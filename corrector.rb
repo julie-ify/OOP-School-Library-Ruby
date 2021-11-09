@@ -1,5 +1,4 @@
 class Corrector
-  
   def correct_name(name)
     get_name = name.strip.capitalize
     if get_name.length > 10
@@ -8,6 +7,3 @@ class Corrector
     end
   end
 end
-
-name = Corrector.new
-p name.correct_name(" julianaifionu")
