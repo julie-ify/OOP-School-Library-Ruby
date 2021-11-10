@@ -3,7 +3,7 @@ require './student'
 require './teacher'
 require './classroom'
 require './book'
-require './rental.rb'
+require './rental'
 
 person = Person.new(18, 'Julianaifionu', false)
 
@@ -55,5 +55,24 @@ first_rental.book
 first_rental.book.author
 
 alpha_book.rentals.last.date
+
+# has-many reationship
+third_rental = Rental.new("1-11-2021")
+fourth_rental = Rental.new("2-11-2021")
+person.rentals
+person.add_rental(third_rental)
+person.add_rental(fourth_rental)
+person.rentals.map{ |rental| rental.date }
+
+person.rentals.count
+
+# belongs-to relationship
+third_rental.person
+third_rental.person = person
+third_rental.person
+third_rental.person.name
+
+person.rentals.first.date
+
 
 
