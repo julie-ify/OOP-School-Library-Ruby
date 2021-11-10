@@ -26,6 +26,8 @@ first_classroom.students
 second_classroom.students
 first_classroom.students.map{ |student| student.name }
 first_classroom.students.last.classroom
+first_classroom.students.count
+second_classroom.students.count
 
 # belongs-to relationship
 first_student.classroom
@@ -37,31 +39,30 @@ first_student.classroom.label
 third_student.classroom.label
 
 # has-many relationship
-first_rental = Rental.new("11-12-2021")
-second_rental = Rental.new("10-12-2021")
-alpha_book = Book.new("Game of thrones", "George Martin")
-alpha_book.rentals
-alpha_book.add_rental(first_rental)
-alpha_book.add_rental(second_rental)
+alpha_book = Book.new("Game of thrones", "George Martin")            
+alpha_book.rentals.count
+alpha_book.add_rental("11-12-2021", person)
+alpha_book.add_rental("10-12-2021", person)
 alpha_book.rentals
 alpha_book.rentals.map{ |rental| rental.date}
 
 alpha_book.rentals.count
 
 # belongs-to relationship
+first_rental = Rental.new("5-11-2021", person, alpha_book)
 first_rental.book
 first_rental.book = alpha_book
 first_rental.book
 first_rental.book.author
 
-alpha_book.rentals.last.date
+alpha_book.rentals.count
 
 # has-many reationship
-third_rental = Rental.new("1-11-2021")
-fourth_rental = Rental.new("2-11-2021")
+third_rental = Rental.new("1-11-2021", person, alpha_book)
+fourth_rental = Rental.new("2-11-2021", person, alpha_book)
 person.rentals
-person.add_rental(third_rental)
-person.add_rental(fourth_rental)
+person.add_rental("3-11-2021", alpha_book)
+person.add_rental("4-11-2021", alpha_book)
 person.rentals.map{ |rental| rental.date }
 
 person.rentals.count
