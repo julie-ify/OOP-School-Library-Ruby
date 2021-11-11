@@ -10,6 +10,7 @@ person = Person.new(18, 'Julianaifionu', false)
 first_student = Student.new(22, 'first_classroom', 'Rex')
 second_student = Student.new(21, 'first_classroom', 'Prince')
 third_student = Student.new(23, 'second_classroom', 'Rose')
+p first_student
 
 Teacher.new('Math', 'Muna')
 
